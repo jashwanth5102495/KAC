@@ -2,12 +2,14 @@ import { motion } from 'framer-motion';
 
 export default function App() {
   return (
-    <div className="relative flex items-center justify-center min-h-screen px-4 py-8">
+    <div className="relative flex items-center justify-center min-h-screen px-4 pt-28 pb-10">
+      {/* Dark overlay to improve text visibility */}
+      <div className="fixed inset-0 -z-5 bg-black/35"></div>
       {/* Animated gradient overlay behind the blurred background */}
       <div className="animated-gradient-overlay fixed inset-0 -z-10 opacity-60 blur-2xl"></div>
 
       {/* Flipping logo header (small and centered) */}
-      <div className="absolute top-6 left-1/2 -translate-x-1/2">
+      <div className="absolute top-6 left-1/2 -translate-x-1/2 z-20">
         <motion.img
           src="/dark-logo.png"
           alt="Green Plant Technologies"
@@ -24,36 +26,38 @@ export default function App() {
         initial={{ opacity: 0, scale: 0.96 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
-        className="max-w-md md:max-w-lg w-full bg-white/20 backdrop-blur-2xl border border-white/20 rounded-3xl p-8 shadow-2xl text-gray-900"
+        className="glass-box max-w-sm md:max-w-md w-full text-gray-900"
       >
-        <h1 className="text-5xl font-extrabold bg-gradient-to-r from-indigo-600 via-sky-500 to-teal-400 text-transparent bg-clip-text tracking-wide drop-shadow-xl mb-2">
-          HUMOLX
+        <h1 className="text-5xl font-extrabold text-green-700 tracking-wide drop-shadow-xl mb-2">
+          Green Plant Technologies
         </h1>
         {/* Optional glowing underline */}
-        <div className="h-1 w-24 bg-gradient-to-r from-indigo-600 via-sky-500 to-teal-400 rounded-full shadow-lg mb-6"></div>
+        
 
-        <div className="space-y-4 text-lg md:text-xl leading-relaxed">
+        <div className="space-y-6 text-lg md:text-xl leading-relaxed text-slate-200">
           <div>
-            <h2 className="font-semibold text-slate-800/90 uppercase tracking-widest mb-1">Gazette Notification</h2>
-            <p>S.O. 2346 (E) Dated 26-05-2025</p>
+            <h2 className="font-semibold text-white uppercase tracking-widest mb-1">1. Gazette Notification</h2>
+            <p className="text-slate-200">S.O3587 Dated 12-09-2024</p>
           </div>
           <div>
-            <h2 className="font-semibold text-slate-800/90 uppercase tracking-widest mb-1">Title of Bio Stimulant</h2>
-            <p>Humates and Fulvates – 22% (Liquid)</p>
+            <h2 className="font-semibold text-white uppercase tracking-widest mb-1">2. Title of Bio Stimulant</h2>
+            <p className="text-slate-200">Humates and Fulvates – 22% (Liquid)</p>
           </div>
           <div>
-            <h2 className="font-semibold text-slate-800/90 uppercase tracking-widest mb-1">Composition</h2>
-            <p>Total water soluble humates and fulvates: 22%</p>
-            <p>pH (1:5 aqueous solution): 9.0 (min)</p>
-            <p>Specific gravity: 1.05</p>
+            <h2 className="font-semibold text-white uppercase tracking-widest mb-1">3. Composition</h2>
+            <ul className="mt-1 space-y-1 text-slate-200">
+              <li>(i) Total water soluble humates and fulvates: 22%</li>
+              <li>(ii) pH (1:5 aqueous solution): 9.0 (min)</li>
+              <li>(iii) Specific gravity: 1.05</li>
+            </ul>
           </div>
           <div>
-            <h2 className="font-semibold text-slate-800/90 uppercase tracking-widest mb-1">Crops</h2>
-            <p>Ground Nut</p>
+            <h2 className="font-semibold text-white uppercase tracking-widest mb-1">4. Crops</h2>
+            <p className="text-slate-200">Ground Nut</p>
           </div>
           <div>
-            <h2 className="font-semibold text-slate-800/90 uppercase tracking-widest mb-1">Dosage</h2>
-            <p>Two soil applications at 1.25L/ha</p>
+            <h2 className="font-semibold text-white uppercase tracking-widest mb-1">5. Dosage</h2>
+            <p className="text-slate-200">Two soil applications at 1.25L/ha</p>
           </div>
         </div>
 
