@@ -26,7 +26,7 @@ export default function App() {
         initial={{ opacity: 0, scale: 0.96 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
-        className="glass-box max-w-sm md:max-w-md w-full text-gray-900"
+        className="glass-box max-w-sm md:max-w-md w-full"
       >
         <h1 className="text-5xl font-extrabold text-green-700 tracking-wide drop-shadow-xl mb-2">
           Green Plant Technologies
@@ -34,18 +34,18 @@ export default function App() {
         {/* Optional glowing underline */}
         
 
-        <div className="space-y-6 text-lg md:text-xl leading-relaxed text-slate-200">
+        <div className="space-y-6 text-lg md:text-xl leading-relaxed text-white">
           <div>
             <h2 className="font-semibold text-white uppercase tracking-widest mb-1">1. Gazette Notification</h2>
-            <p className="text-slate-200">S.O3587 Dated 12-09-2024</p>
+            <p>S.O3587 Dated 12-09-2024</p>
           </div>
           <div>
             <h2 className="font-semibold text-white uppercase tracking-widest mb-1">2. Title of Bio Stimulant</h2>
-            <p className="text-slate-200">Humates and Fulvates – 22% (Liquid)</p>
+            <p>Humates and Fulvates – 22% (Liquid)</p>
           </div>
           <div>
             <h2 className="font-semibold text-white uppercase tracking-widest mb-1">3. Composition</h2>
-            <ul className="mt-1 space-y-1 text-slate-200">
+            <ul className="mt-1 space-y-1">
               <li>(i) Total water soluble humates and fulvates: 22%</li>
               <li>(ii) pH (1:5 aqueous solution): 9.0 (min)</li>
               <li>(iii) Specific gravity: 1.05</li>
@@ -53,11 +53,11 @@ export default function App() {
           </div>
           <div>
             <h2 className="font-semibold text-white uppercase tracking-widest mb-1">4. Crops</h2>
-            <p className="text-slate-200">Ground Nut</p>
+            <p>Ground Nut</p>
           </div>
           <div>
             <h2 className="font-semibold text-white uppercase tracking-widest mb-1">5. Dosage</h2>
-            <p className="text-slate-200">Two soil applications at 1.25L/ha</p>
+            <p>Two soil applications at 1.25L/ha</p>
           </div>
         </div>
 
