@@ -37,7 +37,7 @@ export default function App() {
         <div className="space-y-5 sm:space-y-6 text-base sm:text-lg md:text-xl leading-relaxed text-white">
           <div>
             <h2 className="font-semibold text-white uppercase tracking-widest mb-1">1. Gazette Notification</h2>
-            <p>S.O.2346 (E) Dated 26-05-2025</p>
+            <p>S.O.3922 (E), Dated- 12-9-2024</p>
           </div>
           <div>
             <h2 className="font-semibold text-white uppercase tracking-widest mb-1">2. Title of Bio Stimulant</h2>
