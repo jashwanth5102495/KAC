@@ -46,7 +46,7 @@ export default function App() {
           <div>
             <h2 className="font-semibold text-white uppercase tracking-widest mb-1">3. Composition</h2>
             <ul className="mt-1 space-y-1">
-              <li>(i) Total water soluble humates and fulvates: 22%</li>
+              <li>(i) Total water soluble humates and fulvates: 22 percent weight by volume, minimum 22</li>
               <li>(ii) pH (1:5 aqueous solution): 9.0 (min)</li>
               <li>(iii) Specific gravity: 1.05</li>
             </ul>
