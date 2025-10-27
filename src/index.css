@@ -9,28 +9,18 @@
 body {
   font-family: 'Inter', system-ui, sans-serif;
   min-height: 100vh;
-  /* Removed background image per request */
-  background-color: #0e1116;
+  /* Background switched to soft light blue */
+  background-color: #f0f7ff; /* light blue */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.img-fade-in {
-  opacity: 0;
-  animation: fadeIn 0.8s ease forwards;
-}
-
-@keyframes fadeIn {
-  to { opacity: 1; }
-}
-
-/* Animated gradient overlay for soft, futuristic glow */
 .animated-gradient-overlay {
   background: linear-gradient(120deg,
-    rgba(59, 130, 246, 0.22), /* blue-500 */
-    rgba(147, 51, 234, 0.20),  /* purple-600 */
-    rgba(16, 185, 129, 0.18)   /* emerald-500 */
+    rgba(59, 130, 246, 0.18), /* blue-500 */
+    rgba(14, 165, 233, 0.16), /* sky-500 */
+    rgba(99, 102, 241, 0.14)  /* indigo-500 */
   );
   background-size: 200% 200%;
   animation: gradientX 14s ease-in-out infinite;
