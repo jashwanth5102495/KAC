@@ -24,6 +24,13 @@ export default function App() {
     return () => window.removeEventListener('popstate', onPop);
   }, []);
 
+  const goToGroundnut = () => {
+    if (page !== 'groundnut') {
+      window.history.pushState({}, '', '/groundnut');
+      setPage('groundnut');
+    }
+  };
+
   return (
     <div className="relative flex items-center justify-center min-h-screen px-3 sm:px-4 pt-16 sm:pt-20 pb-8 sm:pb-10">
       {/* Video background */}
@@ -32,7 +39,16 @@ export default function App() {
       </video>
       {/* Gradient backdrop above video for subtle tint */}
       <div className="animated-gradient-overlay fixed inset-0 -z-30 opacity-20 pointer-events-none"></div>
-
+{page === 'paddy' && (
+  <button
+    onClick={goToGroundnut}
+    aria-label="Go to Groundnut"
+    className="fixed right-5 top-5 z-20 flex items-center gap-1 rounded-full bg-white/30 border border-white/50 backdrop-blur px-3 py-1 text-xs text-gray-900 hover:bg-white/40 transition"
+  >
+    <span role="img" aria-hidden="true">🥜</span>
+    <span>Groundnut</span>
+  </button>
+)}
       {/* Glassmorphism main panel */}
       <div className="relative z-10 w-full max-w-2xl rounded-3xl bg-white/25 border border-white/40 backdrop-blur-xl shadow-[0_20px_40px_rgba(0,0,0,0.12)] p-5 sm:p-6">
         <h1 className="text-center text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-wide mb-4">
