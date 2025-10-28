@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 function getPageFromPath(pathname) {
@@ -9,7 +9,27 @@ function getPageFromPath(pathname) {
 
 export default function App() {
   const [page, setPage] = useState(getPageFromPath(window.location.pathname));
+  const videoRef = useRef(null);
 
+  // Ensure the background video starts immediately when ready
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = true; // must be true for autoplay
+    const attemptPlay = () => {
+      const p = v.play();
+      if (p && typeof p.then === 'function') {
+        p.catch(() => {});
+      }
+    };
+    if (v.readyState >= 2) {
+      attemptPlay();
+    } else {
+      v.addEventListener('canplay', attemptPlay, { once: true });
+    }
+  }, []);
+
+  // Sync document title and URL with current page
   useEffect(() => {
     document.title = page === 'paddy' ? 'Paddy' : 'Groundnut';
     const desired = page === 'paddy' ? '/paddy' : '/groundnut';
@@ -18,6 +38,7 @@ export default function App() {
     }
   }, [page]);
 
+  // Listen to browser back/forward to update page state
   useEffect(() => {
     const onPop = () => setPage(getPageFromPath(window.location.pathname));
     window.addEventListener('popstate', onPop);
@@ -34,7 +55,7 @@ export default function App() {
   return (
     <div className="relative flex items-center justify-center min-h-screen px-3 sm:px-4 pt-16 sm:pt-20 pb-8 sm:pb-10">
       {/* Video background */}
-      <video className="fixed inset-0 -z-40 w-full h-full object-cover pointer-events-none" autoPlay loop muted playsInline>
+      <video ref={videoRef} className="fixed inset-0 -z-40 w-full h-full object-cover pointer-events-none" autoPlay loop muted playsInline preload="auto" poster="/bg.png">
         <source src="/bg.mp4" type="video/mp4" />
       </video>
       {/* Gradient backdrop above video for subtle tint */}
