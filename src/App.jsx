@@ -146,11 +146,11 @@ export default function App() {
             <div className="mt-6 grid grid-cols-1 gap-4">
               <div className="rounded-xl bg-white/20 border border-white/40 px-4 py-3 text-gray-900">
                 <div className="text-gray-700 text-xs">1. Gazette Notification</div>
-                <div className="text-lg">S.O.3922</div>
+                <div className="text-lg">S.O.3922(E), Dated 12-9-2024</div>
               </div>
               <div className="rounded-xl bg-white/20 border border-white/40 px-4 py-3 text-gray-900">
                 <div className="text-gray-700 text-xs">2. Title of Bio Stimulant</div>
-                <div className="text-lg">Humates</div>
+                <div className="text-lg">Humates (12.5%) liquid</div>
               </div>
               <div className="rounded-xl bg-white/20 border border-white/40 px-4 py-3 text-gray-900">
                 <div className="text-gray-700 text-xs">3. Composition</div>
