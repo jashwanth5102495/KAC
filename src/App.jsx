@@ -126,9 +126,10 @@ export default function App() {
               <div className="rounded-xl bg-white/20 border border-white/40 px-4 py-3 text-gray-900">
                 <div className="text-gray-700 text-xs">3. Composition</div>
                 <ul className="text-sm mt-1 space-y-1 list-disc pl-5">
-                  <li>(i) Total water soluble humates and fulvates: percent weight by volume, minimum: 22</li>
-                  <li>(ii) pH (1:5 aqueous solution): 9.0 (min)</li>
-                  <li>(iii) Specific gravity: 1.05</li>
+                  <li>(i) Humates (Source: Leonardite) percent. weight by volume, minimum: 19</li>
+                  <li>(ii) Fulvates percent. weight by volume, minimum: 3</li>
+                  <li>(iii) Water percent. weight by volume, maximum: 78</li>
+                  <li>(iv) Total (percent.): 100</li>
                 </ul>
               </div>
               <div className="rounded-xl bg-white/20 border border-white/40 px-4 py-3 text-gray-900">
