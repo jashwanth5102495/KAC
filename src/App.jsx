@@ -98,7 +98,7 @@ export default function App() {
               </div>
               <div className="rounded-xl bg-white/20 border border-white/40 px-4 py-3 text-gray-900">
                 <div className="text-gray-700 text-xs">2. Title of Bio Stimulant</div>
-                <div className="text-lg">KAC</div>
+                <div className="text-lg">Seaweed (Sargassum tenerrimum) 10 % (Liquid)</div>
               </div>
               <div className="rounded-xl bg-white/20 border border-white/40 px-4 py-3 text-gray-900">
                 <div className="text-gray-700 text-xs">3. Composition</div>
