@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 
 function getPageFromPath(pathname) {
   const p = pathname.toLowerCase();
+  if (p.startsWith('/kac')) return 'kac';
   if (p.startsWith('/groundnut')) return 'groundnut';
   if (p.startsWith('/cucumber')) return 'cucumber';
   // Support explicit Green Gram path and legacy shorthand
@@ -35,7 +36,9 @@ export default function App() {
   // Sync document title and URL with current page
   useEffect(() => {
     document.title =
-      page === 'paddy'
+      page === 'kac'
+        ? 'KAC'
+        : page === 'paddy'
         ? 'Paddy'
         : page === 'groundnut'
         ? 'Groundnut'
@@ -43,14 +46,16 @@ export default function App() {
         ? 'Cucumber'
         : 'Green Gram';
     const desired =
-      page === 'paddy'
+      page === 'kac'
+        ? '/KAC'
+        : page === 'paddy'
         ? '/paddy'
         : page === 'groundnut'
         ? '/groundnut'
         : page === 'cucumber'
         ? '/cucumber'
         : '/green-gram';
-    if (window.location.pathname !== desired) {
+    if (window.location.pathname.toLowerCase() !== desired.toLowerCase()) {
       window.history.replaceState({}, '', desired);
     }
   }, [page]);
@@ -84,7 +89,40 @@ export default function App() {
           </div>
         </div>
 
-        {page === 'paddy' ? (
+        {page === 'kac' ? (
+          <motion.div initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
+            <div className="mt-6 grid grid-cols-1 gap-4">
+              <div className="rounded-xl bg-white/20 border border-white/40 px-4 py-3 text-gray-900">
+                <div className="text-gray-700 text-xs">1. Gazette Notification</div>
+                <div className="text-lg">S.O.3922(E), Dated 12-9-2024</div>
+              </div>
+              <div className="rounded-xl bg-white/20 border border-white/40 px-4 py-3 text-gray-900">
+                <div className="text-gray-700 text-xs">2. Title of Bio Stimulant</div>
+                <div className="text-lg">KAC</div>
+              </div>
+              <div className="rounded-xl bg-white/20 border border-white/40 px-4 py-3 text-gray-900">
+                <div className="text-gray-700 text-xs">3. Composition</div>
+                <ul className="text-sm mt-1 space-y-1 list-disc pl-5">
+                  <li>(i) Seaweed (Sargassum tenerrimum) extract per cent. by weight, minimum: 10</li>
+                  <li>(ii) PEG400 as adjuvant per cent. by weight, maximum: 0.1</li>
+                  <li>(iii) Water per cent. by weight, maximum: 89.9</li>
+                  <li>(iv) Total (per cent.): 100</li>
+                </ul>
+              </div>
+              <div className="rounded-xl bg-white/20 border border-white/40 px-4 py-3 text-gray-900">
+                <div className="text-gray-700 text-xs">4. Crops</div>
+                <div className="text-lg">Paddy, Tomato</div>
+              </div>
+              <div className="rounded-xl bg-white/20 border border-white/40 px-4 py-3 text-gray-900">
+                <div className="text-gray-700 text-xs">5. Dosage</div>
+                <ul className="text-sm mt-1 space-y-1 list-disc pl-5">
+                  <li>(i) Paddy: One foliar applications at 625 ml/ha</li>
+                  <li>(ii) Tomato: Two foliar applications at 625 ml/ha</li>
+                </ul>
+              </div>
+            </div>
+          </motion.div>
+        ) : page === 'paddy' ? (
           <motion.div initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
             <div className="mt-6 grid grid-cols-1 gap-4">
               <div className="rounded-xl bg-white/20 border border-white/40 px-4 py-3 text-gray-900">
